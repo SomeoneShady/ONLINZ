@@ -1,4 +1,4 @@
-# I shall create a function that ensures the user submits a valid answer instead of leaving it blank (in this case a name)
+# I shall create a function that ensures the user submits a valid answer instead of leaving it blank or using numbers
 def blank_name(question):
     valid = False
 

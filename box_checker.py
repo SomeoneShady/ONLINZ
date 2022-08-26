@@ -7,8 +7,9 @@ def box_dimensions():
 
 
 name = "Bob"
+volume_cost = 0
 
-# I Have created a loop that stops the user from adding invalid inputs into the code, which would create unexpected outputs.
+# A loop that stops the user from adding invalid inputs into the code, which would create unexpected outputs.
 dimensions_repeat = True
 while dimensions_repeat == True:
     try:
@@ -28,12 +29,16 @@ while dimensions_repeat == True:
     except ValueError:
         print("Sorry, we only allow numbers. Please try again.")
 
+# With the data provided by the user, calculate the base rate and charge the user.
 base_rate = total_volume
 if base_rate <= 6000.0:
     print("This return will cost you $8.00")
+    volume_cost += 8.00
 elif base_rate > 6000.0 and base_rate < 10000.0:
     print("This return will cost you $12.00")
+    volume_cost += 12.00
 else:
     print("This return will cost you $15.00")
+    volume_cost += 15.00
 
-print("Thank you for your time (and money), I hope to see you again!")
+print("Thank you for your time, you will now be charged ${}, we hope to see you again!".format(volume_cost))
