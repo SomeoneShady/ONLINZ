@@ -6,8 +6,6 @@ name = "Bob"
 last_name = input("What is your last name?")
 address = input("What is your address?")
 phone_number = input("What is your telephone number?")
-customer_details["First Name"] = name
-customer_details["Last Name"] = last_name
-customer_details["Address"] = address
-customer_details["Phone Number"] = phone_number
+customer_details["First Name"], customer_details["Last Name"], customer_details["Address"], customer_details["Phone Number"], = name, last_name, address, phone_number
+
 print(customer_details)
