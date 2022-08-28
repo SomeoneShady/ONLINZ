@@ -1,5 +1,7 @@
+# I have created a list that stores each avaliable choice for the user later on
 islands = ["North Island (Te Ika a Maui),", "South Island (Te Wai Pounamu)", "Stewart Island (Rakiura)"]
 
+# I have created a function that tells the user what options they can choose from using the list above
 def chosen_island():
     print("""Which island are you sending this product from?
           1: The North Island (Te Ika a Muai)
@@ -10,8 +12,10 @@ def chosen_island():
 
 print("Alright, now for the final step:")
 
+# I have set the total cost to 8 so it functions with the next code, but this will change when combined with the other files
 total_cost = 8.0
 
+# I have created a while loop that changes the total cost based on the chosen island from the list above
 valid_island = True
 while valid_island == True:
     island = input(chosen_island())
@@ -40,4 +44,5 @@ while valid_island == True:
     except ValueError:
         print("I'm sorry that wasn't an option, please try again.")
 
+# I have made one final print statement that shows the user how much they need to pay after modifications
 print("The total amount you will have to pay is: ${}".format(total_cost))

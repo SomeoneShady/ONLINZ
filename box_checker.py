@@ -1,3 +1,4 @@
+# I have made a function that stores three questions the user has to answer, then stores the user input for later use
 def box_dimensions():
     width = float(input("How wide is the box in centimetres?"))
     length = float(input("How long is the box in centimetres?"))
@@ -5,11 +6,11 @@ def box_dimensions():
     volume = width * length * height
     return width, length, height, volume
 
-
+# I have set temporary values that will be changed once all code files have been combined
 name = "Bob"
 volume_cost = 0
 
-# A loop that stops the user from adding invalid inputs into the code, which would create unexpected outputs.
+# I have created a loop that stops the user from adding invalid inputs into the code, which would create unexpected outputs
 dimensions_repeat = True
 while dimensions_repeat == True:
     try:
@@ -29,7 +30,7 @@ while dimensions_repeat == True:
     except ValueError:
         print("Sorry, we only allow numbers. Please try again.")
 
-# With the data provided by the user, calculate the base rate and charge the user.
+# With the data provided by the user, I shall now calculate the base rate and charge the user.
 base_rate = total_volume
 if base_rate <= 6000.0:
     print("This return will cost you $8.00")

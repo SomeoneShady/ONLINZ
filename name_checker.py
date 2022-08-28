@@ -14,6 +14,6 @@ def blank_name(question):
                 print("Haha, very funny. Please gives us your name, we cannot serve the air.")
 
 
-# Greet the user and ask for their name
+# I shall now greet the user and ask for their name
 name = blank_name("Greetings! What is your name?").title()
 print("{}? What a lovely name!".format(name))
