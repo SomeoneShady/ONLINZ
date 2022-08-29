@@ -19,6 +19,21 @@ def blank_name(question):
             else:
                 print("Haha, very funny. Please gives us your name, we cannot serve the air.")
 
+# Using the function above, I shall make a similar piece of code that only accepts numbers rather than letters
+def valid_number(question):
+    valid = False
+
+    while not valid:
+        response = input(question)
+
+        if response.isdigit() == False:
+            print("Please input your Phone Number using numbers")
+        else:
+            while response != "":
+                return response
+            else:
+                print("Haha, very funny. Please gives us your name, we cannot serve the air.")
+
 # I have also made a function that stores three questions the user has to answer, then stores the user input for later use
 def box_dimensions():
     width = float(input("How wide is the box in centimetres?"))
@@ -100,10 +115,25 @@ while valid_island == True:
             islands.append(new_island)
             print(islands, """
             Is this correct? We won't add any additional charges as we need to calculate
-            the shipping fees for that location, I guess it's your lucky break!""")
+            the shipping fees for that location, I guess it's your lucky day!""")
             valid_island = False
         else:
             print("I'm sorry that wasn't an option, please try again.")
 
     except ValueError:
         print("I'm sorry that wasn't an option, please try again.")
+
+# I shall now make a series of inputs that provides me with te information I need in order to remember the user if they appear again
+print("Before we send you the official receipt, we're going ask you a few more questions:")
+last_name = blank_name("What is your last name?").title()
+address = input("What is your address?")
+phone_number = valid_number("What is your telephone number?")
+customer_details["First Name"], customer_details["Last Name"], customer_details["Address"], customer_details["Phone Number"], = name, last_name, address, phone_number
+
+# I will now print out the list, allowing the user to confirm if this data is correct
+print("Thank you for your cooperation, we will now print out the receipt:")
+print("**************************")
+for key, value in customer_details.items():
+    print("{}: {}".format(key, value))
+print("Total Cost: ${}".format(total_cost))
+print("**************************")
