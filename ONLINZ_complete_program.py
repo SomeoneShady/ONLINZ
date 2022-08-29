@@ -137,3 +137,4 @@ for key, value in customer_details.items():
     print("{}: {}".format(key, value))
 print("Total Cost: ${}".format(total_cost))
 print("**************************")
+print("Thank you for your time, have a good day!")
